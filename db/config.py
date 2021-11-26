@@ -9,6 +9,9 @@ path = pardir + sep + 'db' + sep + 'files' + sep
 # Declare the name and path of the sqlite database file.
 db_file = path + 'chinook.db'
 
+print("==========================")
+print(db_file)
+
 # Instantiate the engine that will be used to connect to our sqlite database.
 engine = create_engine('sqlite:///' + db_file, echo=True)
 

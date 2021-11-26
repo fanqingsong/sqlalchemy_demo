@@ -15,9 +15,12 @@ query = sess.query(
     Artists.name,
     Albums.title,
     Tracks.name.label('track')
-).join(
-    Albums, Tracks
-).filter(
+).\
+join(
+    Albums, 
+    Tracks
+)\
+.filter(
     Artists.name == 'Ozzy Osbourne'
 )
 
@@ -40,3 +43,6 @@ simple as specifying the Declaratives.
 print(pd.read_sql_query(query.statement, engine))
 
 """Pandas can directly import from SQLAlchemy by using the read_sql_query function."""
+
+sess.close()
+

@@ -12,8 +12,8 @@ sess = Session()
 # There are several ways to join tables in SQLAlchemy and the documentation can be found here:
 # http://http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.join
 query = sess.query(
-
+    Artists.name
 )
 
 # Print the results.
-print()
+print(query)
