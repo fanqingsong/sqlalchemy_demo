@@ -16,9 +16,11 @@ query = sess.query(
     func.count(Albums.title).label('number_of_albums')
 ).join(
     Albums
-).group_by(
+)\
+.group_by(
     Artists.name
-).order_by(
+)\
+.order_by(
     desc('number_of_albums')
 )
 
@@ -36,4 +38,5 @@ specify a name for the aggregated count column, otherwise, SQLAlchemy would use 
 
 # Print the results.
 example2 = pd.read_sql_query(query.statement, engine)
-print(example2[:3])
+print(example2)
+# print(example2[:3])

@@ -40,6 +40,9 @@ simple as specifying the Declaratives.
 """
 
 # Print the results.
+print("======================================")
+print(query.statement)
+print("======================================")
 print(pd.read_sql_query(query.statement, engine))
 
 """Pandas can directly import from SQLAlchemy by using the read_sql_query function."""
