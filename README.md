@@ -17,3 +17,14 @@ Now, you're all set!
 The top level of the repo has three directories, *answers*, *challenges* and *db*. The *db* directory is where the db engine, session, declarative base and tables are defined. The *challenges* directory has the exercises to work through, and *answers* the answers to the exercises.
 
 Before getting started on the exercises, make sure to add all the fields for the Albums, Tracks, MediaTypes and Genres tables. The Artists table has already been completed, and can be used as a reference.
+
+
+## Run
+
+```
+cd challenges | cd answers
+
+../bin/run.sh answer1.py
+
+```
+
